@@ -26,7 +26,21 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.indigo.min.css">
+        <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.indigo.min.css"> -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#6366f1',
+                            secondary: '#18181b'
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="custom.css">
         
         <!-- Structured Data -->
         <script type="application/ld+json">
@@ -49,26 +63,30 @@
         }
         </script>
     </head>
-    <body>
-        <header class="container" style="text-align: center;">
-            <nav>
-                <ul>
-                  <li><strong><a href="index.html"><img src="images/winterborne_transparent.png" alt="Winterborne Solutions" style="width: 100px; height: 100px;"/>Winterborne Solutions</a></strong></li>
+    <body class="custom-bg text-white">
+        <header class="container mx-auto px-4 py-8">
+            <nav class="flex justify-between items-center">
+                <ul class="flex items-center">
+                    <li>
+                        <a href="index.html" class="flex items-center">
+                            <img src="images/winterborne_transparent.png" alt="Winterborne Solutions" class="w-24 h-24"/>
+                        </a>
+                    </li>
                 </ul>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li>Contact</li>
+                <ul class="flex space-x-6">
+                    <li><a href="about.html" class="link">About</a></li>
+                    <li><a href="services.html" class="link">Services</a></li>
+                    <li><a href="contact.html" class="link">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main class="container">
-          <h2>Contact Us</h2>
-          <p>Interested in discussing an engagement, or just have a question? Let's chat.</p>
-          <p><a href="mailto:hello@winterbornesolutions.com">Email us</a>, and you'll hear back promptly.</p>
+        <main class="container mx-auto px-4 py-8">
+            <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+            <p class="mb-6">We'd love to hear from you. Send us a message and we'll respond as soon as possible.</p>
+            <p class="mb-6"><a href="mailto:hello@winterbornesolutions.com" class="link">Email us</a>, and you'll hear back promptly.</p>
         </main>
-        <footer class="container">
-            <small>&copy; 2025 Winterborne Solutions. All rights reserved.</small>
+        <footer class="container mx-auto px-4 py-8 text-center text-gray-400">
+            <p>&copy; 2025 Winterborne Solutions. All rights reserved.</p>
         </footer>
     </body>
 </html>
