@@ -26,7 +26,20 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.indigo.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#4f46e5',  // Indigo
+                            secondary: '#7c3aed'  // Violet
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="custom.css">
         
         <!-- Structured Data -->
         <script type="application/ld+json">
@@ -51,39 +64,52 @@
         }
         </script>
     </head>
-    <body>
-        <header class="container" style="text-align: center;">
-            <nav>
-                <ul>
-                  <li><strong><a href="index.html"><img src="images/winterborne_transparent.png" alt="Winterborne Solutions" style="width: 100px; height: 100px;"/>Winterborne Solutions</a></strong></li>
+    <body class="custom-bg">
+        <header class="container mx-auto px-4 py-8">
+            <nav class="flex justify-between items-center">
+                <ul class="flex items-center">
+                    <li>
+                        <a href="index.html" class="flex items-center">
+                            <img src="images/winterborne_transparent.png" alt="Winterborne Solutions" class="w-24 h-24"/>
+                        </a>
+                    </li>
                 </ul>
-                <ul>
-                    <li><a href="about.html">About</a></li>
-                    <li>Services</li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="flex space-x-6">
+                    <li><a href="about.html" class="link">About</a></li>
+                    <li><a href="services.html" class="link">Services</a></li>
+                    <li><a href="contact.html" class="link">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main class="container">
-          <h2>Services</h2>
-          <p>We offer flexible options for our clients, matching the needs of their business.</p>
-          <ul>
-            <li>
-              <h4>Consulting</h4>
-              <p>Consulting can be done on a project basis, or on retainer.</p>
-            </li>
-            <li>
-              <h4>Advisory</h4>
-              <p>Advisory positions give founders the benefit of insights from a seasoned leader and startup veteran on a long-term basis.</p>
-            </li>
-            <li> 
-              <h4>Fractional CPTO, CPO, or CTO</h4>
-              <p>Fractional executive roles provide the depth and breadth of a full-time executive, but on a part-time basis.</p>
-            </li>
-          </ul>
-          <p>Not sure what option best fits your needs, or looking to discuss a custom engagement? <a href="mailto:hello@winterbornesolutions.com">Get in touch</a>.</p>
+        <main class="container mx-auto px-4 py-8">
+            <h2 class="text-3xl font-bold mb-6">Our Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-white/10 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">Product Strategy</h3>
+                    <p class="mb-4">We help startups define and execute their product strategy, from initial concept to market launch and beyond.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Product roadmap development</li>
+                        <li>Market research and analysis</li>
+                        <li>User experience design</li>
+                        <li>Product-market fit optimization</li>
+                    </ul>
+                </div>
+                <div class="bg-white/10 p-6 rounded-lg">
+                    <h3 class="text-xl font-bold mb-4">Engineering Solutions</h3>
+                    <p class="mb-4">Our engineering expertise helps startups build scalable, reliable, and innovative technology solutions.</p>
+                    <ul class="list-disc list-inside space-y-2">
+                        <li>Cloud architecture design</li>
+                        <li>System scaling and optimization</li>
+                        <li>Machine learning implementation</li>
+                        <li>Best practices and code review</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mt-8">
+                <p>Interested in our services? <a href="mailto:hello@winterbornesolutions.com" class="link">Contact us</a> to discuss how we can help your business grow.</p>
+            </div>
         </main>
-        <footer class="container">
+        <footer class="container mx-auto px-4 py-8 text-center text-gray-400">
             <small>&copy; 2025 Winterborne Solutions. All rights reserved.</small>
         </footer>
     </body>

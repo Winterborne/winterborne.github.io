@@ -1,0 +1,12 @@
+:root[data-theme="dark"] {
+    --pico-background-color: #1a1a1a;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Ensure the gradient covers the full viewport */
+html, body {
+    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%) !important;
+    min-height: 100vh;
+} 

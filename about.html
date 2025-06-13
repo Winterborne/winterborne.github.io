@@ -26,7 +26,20 @@
         <link rel="icon" type="image/x-icon" href="/favicon.ico">
         
         <!-- Stylesheet -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2.1.1/css/pico.indigo.min.css">
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#4f46e5',  // Indigo
+                            secondary: '#7c3aed'  // Violet
+                        }
+                    }
+                }
+            }
+        </script>
+        <link rel="stylesheet" href="custom.css">
         
         <!-- Structured Data -->
         <script type="application/ld+json">
@@ -51,28 +64,30 @@
         }
         </script>
     </head>
-    <body>
-        <header class="container" style="text-align: center;">
-            <nav>
-                <ul>
-                    <li><strong><a href="index.html"><img src="images/winterborne_transparent.png" alt="Winterborne Solutions" style="width: 100px; height: 100px;"/>Winterborne Solutions</a></strong></li>
+    <body class="custom-bg">
+        <header class="container mx-auto px-4 py-8">
+            <nav class="flex justify-between items-center">
+                <ul class="flex items-center">
+                    <li>
+                        <a href="index.html" class="flex items-center">
+                            <img src="images/winterborne_transparent.png" alt="Winterborne Solutions" class="w-24 h-24"/>
+                        </a>
+                    </li>
                 </ul>
-                <ul>
-                    <li>About</li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                <ul class="flex space-x-6">
+                    <li><a href="about.html" class="link">About</a></li>
+                    <li><a href="services.html" class="link">Services</a></li>
+                    <li><a href="contact.html" class="link">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <main class="container">
-          <h2>About Us</h2>
-          <p>Nick Branstator is the principal at Winterborne Solutions.
-            He has over 25 years of experience in the startup industry, including 19 at the c-suite level.
-            In those roles, he has grown companies from $0M to $5M ARR, and from $20M to $130.
-            Nick leads all of Winterborne Solutions' client engagements, bringing in trusted collaborators for specific projects.
-          </p>
+        <main class="container mx-auto px-4 py-8">
+            <h2 class="text-3xl font-bold mb-6">About Winterborne Solutions</h2>
+            <p class="mb-6">Winterborne Solutions is a boutique consulting firm specializing in product and engineering solutions for startups. Our team brings decades of combined experience in building and scaling successful technology companies.</p>
+            <p class="mb-6">We work closely with our clients to understand their unique challenges and provide tailored solutions that drive growth and innovation. Our approach combines technical expertise with strategic thinking to deliver results that matter.</p>
+            <p>Ready to transform your business? <a href="mailto:hello@winterbornesolutions.com" class="link">Contact us</a> to learn more about how we can help.</p>
         </main>
-        <footer class="container">
+        <footer class="container mx-auto px-4 py-8 text-center text-gray-400">
             <small>&copy; 2025 Winterborne Solutions. All rights reserved.</small>
         </footer>
     </body>
