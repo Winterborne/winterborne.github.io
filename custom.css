@@ -1,17 +1,23 @@
+:root {
+  --brand: #5ac1ea;       /* Winterborne blue, sampled from the logo mark */
+  --brand-light: #81cfef; /* hover / lighter tint */
+  --brand-dark: #2b9cc9;  /* deeper shade, for use on light surfaces */
+}
+
 body {
-  background: radial-gradient(ellipse at center, rgba(57, 60, 230, 0.5) 0%, #18181b 70%, #000 100%);
+  background: radial-gradient(ellipse at center, rgba(90, 193, 234, 0.4) 0%, #18181b 70%, #000 100%);
 }
 
 .custom-bg {
   min-height: 100vh;
-  background: radial-gradient(ellipse at center, rgba(57, 60, 230, 0.5) 0%, #18181b 70%, #000 100%);
+  background: radial-gradient(ellipse at center, rgba(90, 193, 234, 0.4) 0%, #18181b 70%, #000 100%);
   color: #fff;
 }
 
 .link {
-  color: #60a5fa; /* Tailwind blue-400 */
+  color: var(--brand);
   transition: color 0.2s;
 }
 .link:hover, .link:focus {
-  color: #93c5fd; /* Tailwind blue-300 */
-} 
+  color: var(--brand-light);
+}
